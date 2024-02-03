@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 70px; /* Added to give space for the fixed navbar */
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 50px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-left, .section-right {
+            width: 48%;
+        }
+
+        .section-left {
+            order: 2;
+            text-align: right;
+        }
+
+        .section-right {
+            order: 1;
+            text-align: left;
+        }
+
+        .section-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-img:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #666;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .section-left, .section-right {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-img {
+                margin-top: 20px;
+            }
+        }
+    </style>
+    <title>Morina Industries</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Morina Library</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="indexx.html">Home</a>
+        <a href="#">Product 1</a>
+        <a href="#">Product 2</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- 1st Section -->
+        <section>
+            <div class="section-left">
+                <h2>Why is it named "Morina"</h2>
+                <p>Some text explaining why the company is named "Morina".</p>
+            </div>
+            <div class="section-right">
+                <img class="section-img" src="path/to/your/image1.jpg" alt="Image 1">
+            </div>
+        </section>
+
+        <!-- 2nd Section -->
+        <section>
+            <div class="section-left">
+                <img class="section-img" src="path/to/your/image2.jpg" alt="Image 2">
+            </div>
+            <div class="section-right">
+                <h2>Who is the owner of the company Morina Industries</h2>
+                <p>Information about the owner of Morina Industries.</p>
+            </div>
+        </section>
+
+        <!-- 3rd Section -->
+        <section>
+            <div class="section-left">
+                <h2>Meet the owner</h2>
+                <p>Some facts about the owner.</p>
+            </div>
+            <div class="section-right">
+                <img class="section-img" src="path/to/your/image3.jpg" alt="Image 3">
+            </div>
+        </section>
+
+        <!-- 4th Section -->
+        <section>
+            <div class="section-left">
+                <img class="section-img" src="path/to/your/image4.jpg" alt="Image 4">
+            </div>
+            <div class="section-right">
+                <h2>Morina Industries products</h2>
+                <ul>
+                    <li>Product 1</li>
+                    <li>Product 2</li>
+                    <li>Product 3</li>
+                    <!-- Add more products as needed -->
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
