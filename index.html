@@ -36,13 +36,15 @@
       <link rel="stylesheet" href="owl.carousel.min.css">
       <link rel="stylesheet" href="owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
    </head>
    <body>
-      <!-- banner bg main start -->
       <div class="banner_bg_main">
+
          <style>
    
          </style>
+
          <!-- header top section start -->
          <div class="container">
             <div class="header_section_top">
@@ -50,9 +52,9 @@
                   <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
-                           <li><a href="indexx.html">Home</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
-                           <li><a href="indexx.html">Morina Industries</a></li>
+   <li> <a href="index.html">Home</a></li>
+   <li> <a href="indexx.html">About</a></li>
+   <li> <a href="contact.html">Contact</a></li>
                         </ul>
                      </div>
                   </div>
@@ -75,7 +77,6 @@
             <div class="container">
                <div class="containt_main">
                   <div id="mySidenav" class="sidenav">
-                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index.html">Home</a>
                      <a href="contact.html">Contact</a>
                      <a href="electronic.html">About Us</a>
@@ -107,10 +108,33 @@
                         <img src="flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu ">
-                           <a href="#" class="dropdown-item">
-                           <img src="bigstock-flags-of-kosovo-and-albania-pa-335344576.jpg" class="mr-2" alt="flag" width="50px">
-                           SHQIP
-                           </a>
+                           <a href="#" class="dropdown-item" id="translateBtn">
+                              <img src="bigstock-flags-of-kosovo-and-albania-pa-335344576.jpg" class="mr-2" alt="flag" width="50px">
+                              SHQIP
+                          </a>
+
+                          <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+                          <script>
+                           function googleTranslateElementInit() {
+                               new google.translate.TranslateElement({pageLanguage: 'sq'}, 'google_translate_element');
+                           }
+                       
+                           $(document).ready(function () {
+                               // Attach click event to the translate button
+                               $('#translateBtn').click(function () {
+                                   var textToTranslate = $(this).text();
+                                   google.translate.translate(textToTranslate, 'sq', 'sq', function (result) {
+                                       // Update only the text content of the clicked element
+                                       $('#translateBtn').text(result.translation);
+                                   });
+                               });
+                           });
+                       </script>
+
+
+
                         </div>
                      </div>
                      <div class="login_menu">
@@ -483,14 +507,6 @@
       <!-- sidebar -->
       <script src="jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="custom.js"></script>
-      <script>
-         function openNav() {
-           document.getElementById("mySidenav").style.width = "250px";
-         }
-         
-         function closeNav() {
-           document.getElementById("mySidenav").style.width = "0";
-         }
-      </script>
+
    </body>
 </html>
