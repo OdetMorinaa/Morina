@@ -448,6 +448,22 @@ button {
     display: none;
 }
 
+input, textarea{
+    height: 60px;
+    border-color: gray solid;
+}
+button{
+    height: 30px;
+    width: 120px;
+}
+
+input:active{
+    border: none;
+}
+textarea:active{
+    border: none;
+}
+
 .has-search .form-control-feedback {
     position: absolute;
     z-index: 2;
