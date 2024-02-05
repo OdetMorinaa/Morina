@@ -415,6 +415,31 @@ button {
     order: 2;
 }
 
+
+/* Add these styles to your style.css file */
+
+/* Your existing styles here */
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .box_main {
+       margin-bottom: 15px;
+    }
+ 
+    .shirt_text {
+       font-size: 14px;
+       margin-bottom: 8px;
+    }
+ 
+    .price_text {
+       font-size: 12px;
+    }
+ 
+    /* Additional styles for smaller screens */
+ }
+ 
+
+
 .btn-secondary {
     color: #fff;
     background-color: #30302e;
