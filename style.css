@@ -335,7 +335,7 @@ button {
 
 @media screen and (max-width: 768px) {
     .sidenav {
-        width: 20%;
+        width: 40%;
     }
 
     .toggle_icon {
