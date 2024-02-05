@@ -117,11 +117,36 @@
                   <div class="main">
                      <!-- Another variation with a button -->
                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search this blog">
-                        <div class="input-group-append">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search this blog">
+                        <button class="btn btn-outline-secondary" onclick="searchBlog()">Search</button>
+                                                <div class="input-group-append">
                         </div>
                      </div>
                   </div>
+
+                  <script>
+                     function searchBlog() {
+                        var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+                        var contentContainer = document.getElementById("searchableContent");
+                        var bookTitles = contentContainer.getElementsByClassName("shirt_text");
+                  
+                        // Hide all items initially
+                        for (var i = 0; i < bookTitles.length; i++) {
+                           bookTitles[i].parentNode.parentNode.style.display = "none";
+                        }
+                  
+                        // Show only the items that match the search term
+                        for (var i = 0; i < bookTitles.length; i++) {
+                           var title = bookTitles[i].innerText.toLowerCase();
+                           if (title.includes(searchTerm)) {
+                              bookTitles[i].parentNode.parentNode.style.display = "block";
+                           }
+                        }
+                     }
+                  </script>
+                  
+
+                  
                   <div class="header_box">
                      <div class="lang_box ">
                         <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
