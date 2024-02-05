@@ -216,7 +216,7 @@ button {
     float: left;
     background-color: orange;
     height: 150%;
-    background-size: 100%;
+    background-size: 140%;
     background-repeat: no-repeat;
 }
 
@@ -636,31 +636,22 @@ a:hover {
     margin-top: 30px;
 }
 
+/* Add these styles to your style.css file */
+
 .box_main {
-    width: 100%;
-    background-color: #ffffff;
-    height: auto;
-    padding: 20px;
-    box-shadow: 0px 0 30px 10px #f0f0f0;
-    margin-bottom: 20px;
-}
-
-.shirt_text {
-    width: 100%;
-    font-size: 20px;
-    color: #30302e;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 5px;
-}
-
-.price_text {
-    width: 100%;
-    font-size: 16px;
-    color: #f26522;
-    text-align: center;
-    margin: 0px;
-}
+    margin-bottom: 20px; /* Adjust the margin based on your design */
+ }
+ 
+ .shirt_text {
+    font-size: 16px; /* Adjust the font size based on your design */
+    margin-bottom: 10px; /* Adjust the margin based on your design */
+ }
+ 
+ .price_text {
+    font-size: 14px; /* Adjust the font size based on your design */
+    color: #262626;
+ }
+ 
 
 .tshirt_img {
     width: 100%;
