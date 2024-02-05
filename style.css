@@ -333,12 +333,58 @@ button {
     margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 768px) {
     .sidenav {
-        padding-top: 15px;
+        width: 20%;
     }
-    .sidenav a {
-        font-size: 18px;
+
+    .toggle_icon {
+        display: none; /* Hide the toggle icon on smaller screens */
+    }
+
+    .custom_menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom_menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .custom_menu li {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .custom_menu li a {
+        display: block;
+        padding: 10px;
+        color: #f1f1f1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .custom_menu li a:hover {
+        background-color: #30302e;
+        color: #f26522;
+    }
+
+    .header_section {
+        flex-direction: column;
+    }
+
+    .main {
+        order: 1;
+    }
+
+    .login_menu {
+        float: none;
+        text-align: center;
+    }
+
+    .lang_box {
+        margin-right: 0;
     }
 }
 

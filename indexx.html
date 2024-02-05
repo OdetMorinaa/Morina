@@ -5,6 +5,34 @@
     <link rel="shortcut icon" href="OdetOdet.jpeg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        function translateToShqip() {
+            libreTranslate('en', 'sq'); // Translate from English to Albanian
+        }
+
+        function translateToEnglish() {
+            libreTranslate('sq', 'en'); // Translate from Albanian to English
+        }
+
+        function libreTranslate(sourceLang, targetLang) {
+            const elementsToTranslate = document.querySelectorAll('[data-translate]');
+
+            elementsToTranslate.forEach(element => {
+                const text = element.innerHTML;
+                const url = `https://libretranslate.de/translate?source=${sourceLang}&target=${targetLang}&q=${encodeURIComponent(text)}`;
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        const translatedText = data.translatedText;
+                        element.innerHTML = translatedText;
+                    })
+                    .catch(error => console.error('Translation error:', error));
+            });
+        }
+    </script>
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -132,11 +160,13 @@
         <section>
             <div class="section-left">
                 <h2>Why is it named "Morina"</h2>
-               <p> In the realm of commerce, there exists an establishment of unparalleled distinction, known as "Morina."<br>The genesis of this illustrious enterprise finds its roots in the visionary endeavors of one Odet J. Morina, whose very name graces the inception of this esteemed company.<br>It is not mere happenstance that the nomenclature commences with the resonant syllables of "Morina," for the progenitor of this venture bears the distinguished mantle of that very appellation.
+               <p> Në sferën e tregtisë, ekziston një institucion i pamatuar për dallim, i njohur si "Morina." Gjeneza e këtij ndërmarrjeje të lavdishme gjen rrënjët e saj në përpjekjet vizionare të Odet J. Morina, emri i të cilit vlen për themelin e kësaj kompanie të nderuar.
 
-                In the tapestry of familial lineage, Odet J. Morina stands as a paragon, a scion of a lineage bearing the noble surname "Morina." <br>The proprietor, with an air of noble pride, takes delight in showcasing the heraldry of his lineage, a lineage steeped in heritage and distinction.<br>Such is the regality bestowed upon this patron of commerce that he seeks to etch his family's name indelibly upon the annals of renown. <br>
+                Nuk është rastësi e thjeshtë që emri fillon me sllallat e zëshme të "Morina," sepse themeluesi i këtij shpërndarjeje mban mërgimën e dalluar të asaj emërtimi. Në tapiserinë e trashëgimisë familjare, Odet J. Morina shndrit si një paragon, një pasardhës i një linje që mban mbiemrin e lavdishëm "Morina."
                 
-                With an unwavering resolve, the proprietor aspires to elevate the standing of his esteemed kin, ensuring that the Morina family attains the pinnacle of distinction and is heralded as the epitome of excellence on a global scale. Thus, driven by a fervent commitment to legacy and a quest for preeminence, the proprietor of "Morina" endeavors to inscribe the name of his lineage in the annals of the world's most esteemed families.</p>            </div>
+                Pronari, me një frymë dinjitoze, kënaqet në shfaqjen e stemës së trashëgimisë së tij, një trashëgimi e përpunuar në trashëgimi dhe dallim. Kështu është mbretëria e dhënë këtij mbrojtësi të tregtisë që ai kërkon të gërmojë emrin e familjes së tij përgjithmonë në letërsinë e famës.
+                
+                Me një vendosmëri të pandryshuar, pronari shpreson të ngritë pozitën e fisit të tij të nderuar, duke siguruar që familia Morina të arrijë majën e dallimit dhe të shpallet si epitomi i shkëlqimit në shkallë globale. Kështu, shtyrë nga një përkushtim i zjarrtë për trashëgimi dhe një kërkim për nderim, pronari i "Morina" përpjeket të gërmojë emrin e fisit të tij në letrat e familjeve më të nderuara në botë.</p>            </div>
             <div class="section-right">
                 <img class="section-img" src="path/to/your/image1.jpg" alt="Image 1">
             </div>
@@ -148,12 +178,11 @@
                 <img class="section-img" src="odetmorinaPROFIL2.jpg" alt="Image 2">
             </div>
             <div class="section-right">
-                <h2>Who is the owner of the company Morina Industries</h2>
+                <h2>Kush është pronari i kompanisë Morina Industries?</h2>
                 <p>        
-                                Odet J. Morina, born on June 21, 2009, in Kosovo Polje, is a promising young individual from one of Kosovo's renowned cities. Raised in Kosovo Polje, Odet's early life has been marked by a keen interest in technology and exploration.
-<br>
-<br>
-                                Currently enrolled in the 9th grade, Odet has demonstrated a passion for programming. With a focus on pursuing programming as a primary profession, Odet has embarked on an educational journey that includes an impressive track record of achievements.
+                    Odet J. Morina, lindur më 21 qershor 2009, në Kosovë Polje, është një individ i shquar dhe premtues nga një nga qytetet e njohura të Kosovës. Rritur në Kosovë Polje, jeta e hershme e Odetit ka shënuar një interes të theksuar për teknologjinë dhe eksplorimin.
+
+                    Aktualisht i regjistruar në klasën e 9-të, Odet ka treguar pasion për programim. Me fokus në ndjekjen e programimit si një profesion kryesor, Odet ka nisur një udhëtim arsimor që përfshin një rekord impresiv të arritjeve.
 
                 </p>
             </div>
@@ -163,17 +192,20 @@
         <section>
             <div class="section-left">
                 <a href="Odet J. Morina - Wikipedia.html"><h2>Meet the owner</h2></a>
-                <p>Early Life
-                    Odet J. Morina, born on June 21, 2009, in Kosovo Polje, is a promising young individual from one of Kosovo's renowned cities. Raised in Kosovo Polje, Odet's early life has been marked by a keen interest in technology and exploration.
-                    
-                    Education
-                    Currently enrolled in the 9th grade, Odet has demonstrated a passion for programming. With a focus on pursuing programming as a primary profession, Odet has embarked on an educational journey that includes an impressive track record of achievements.
-                    
-                    Programming Expertise
-                    Odet has dedicated five years to a comprehensive programming course, acquiring a wealth of knowledge and skills. Holding seven certificates in programming, Odet has mastered languages such as HTML, CSS, JavaScript, MySQL, and more. This extensive expertise positions Odet as a promising figure in the ever-evolving field of technology.
-                    
-                    Hobbies and Interests
-                    Beyond the world of programming, Odet is an avid researcher and explorer of the internet. This curiosity-driven hobby reflects a deep-seated passion for discovering new things and staying at the forefront of technological advancements.</p>
+                <p>Jetë e hershme
+                    <br>
+                    <br>
+                    Jetë e hershme
+Odet J. Morina, i lindur më 21 qershor 2009, në Kosovë Polje, është një individ premtues nga një nga qytetet e njohura të Kosovës. Rritur në Kosovë Polje, jeta e hershme e Odetit është shënuar nga një interes i theksuar për teknologjinë dhe eksplorimin.
+
+Arsim
+Aktualisht i regjistruar në klasën e 9-të, Odet ka treguar pasion për programim. Me fokus në ndjekjen e programimit si një profesion kryesor, Odet ka nisur një udhëtim arsimor që përfshin një rekord të impresiv të arritjeve.
+
+Ekspertiza në Programim
+Odet i ka kushtuar pesë vjet një kursi të gjërë programimi, duke fituar një pasuri të njohurive dhe shkathtësive. Me shtatë çertifikata në programim, Odet ka shpërfaqur njohuri të thella në gjuhë programimi si HTML, CSS, JavaScript, MySQL, dhe më shumë. Kjo ekspertizë e gjërë pozicionon Odetin si një figurë premtuese në fushën gjithnjë e në ndryshim të teknologjisë.
+
+Hobi dhe Interesa
+Përtej botës së programimit, Odet është një kërkues dhe eksplorues i internetit. Ky hobi i motivuar nga kurioziteti reflekton një pasion të thellë për zbulimin e gjërave të reja dhe mbetjen në krye të zhvillimeve teknologjike.</p>
             </div>
             <div class="section-right">
                 <img class="section-img" src="Odetprofil.png" alt="Image 3">
@@ -185,7 +217,7 @@
             <div class="section-left">
             </div>
             <div class="section-right">
-                <h2>Morina Industries products</h2>
+                <h2>Produktet e Morina Industries</h2>
                 <ul>
                    <a href="index.html"> <li><img src="Odet.png" alt="" width="75px" style="border-radius: 50px;"></li></a>
                    <a href="indexx.html"></a> <li><img src="OdetOdet.jpeg" alt="" width="75px" style="border-radius: 50px;"></li> </a>
