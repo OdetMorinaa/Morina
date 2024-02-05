@@ -300,13 +300,13 @@ button {
 /* opennav bar start */
 
 .sidenav {
-    height: 120%;
+    height: 45%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #333;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -335,7 +335,7 @@ button {
 
 @media screen and (max-width: 768px) {
     .sidenav {
-        width: 40%;
+        width: 38%;
     }
 
     .toggle_icon {
@@ -448,13 +448,9 @@ button {
     display: none;
 }
 
-input, textarea{
+input{
     height: 60px;
     border-color: gray solid;
-}
-button{
-    height: 30px;
-    width: 120px;
 }
 
 input:active{

@@ -84,22 +84,41 @@
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src=""></span>
                   <div class="dropdown">
-                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
-                     </button>
+                     <!-- <button class="btn btn-secondary" id="toggleNavBtn">Navigim</button> -->
+                  </button>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                      </div>
                   </div>
+
+                  <script>
+                     function openNav() {
+                        document.getElementById("mySidenav").style.width = "50px";
+                     }
+
+                     function closeNav() {
+                        document.getElementById("mySidenav").style.width = "";
+                     }
+
+                     // Toggle navigation bar when the "navigim" button is clicked
+                     document.getElementById("toggleNavBtn").addEventListener("click", function() {
+                        var sideNavWidth = document.getElementById("mySidenav").style.width;
+                        if (sideNavWidth === "12px" || sideNavWidth === "") {
+                           openNav();
+                        } else {
+                           closeNav();
+                        }
+                     });
+                  </script>
+
+
                   <div class="main">
                      <!-- Another variation with a button -->
                      <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search this blog">
                         <div class="input-group-append">
-                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
-                           <i class="fa fa-search"></i>
-                           </button>
                         </div>
                      </div>
                   </div>
