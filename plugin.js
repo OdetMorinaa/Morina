@@ -11519,7 +11519,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 	options: {
 		alsoResize: false,
 		animate: false,
-		animateDuration: "slow",
+		animateDuration: "fast",
 		animateEasing: "swing",
 		aspectRatio: false,
 		autoHide: false,

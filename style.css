@@ -32,6 +32,7 @@ body {
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 a {
@@ -688,12 +689,16 @@ a:hover {
 
 .box_main {
     margin-bottom: 20px; /* Adjust the margin based on your design */
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
  }
  
  .shirt_text {
     font-size: 16px; /* Adjust the font size based on your design */
     margin-bottom: 10px; /* Adjust the margin based on your design */
  }
+
  
  .price_text {
     font-size: 14px; /* Adjust the font size based on your design */

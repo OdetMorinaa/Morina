@@ -48,20 +48,6 @@ $(function () {
 		});
 	});
 	
-	$(document).ready(function() {
-	  var owl = $('.banner-rotator-slider');
-	  owl.owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 10,
-		nav: true,
-		dots: false,
-		navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-		autoplay: true,
-		autoplayTimeout: 3000,
-		autoplayHoverPause: true
-	  });	  
-	});
 	
 
 	$(window).on('scroll', function (){
@@ -203,43 +189,8 @@ $(function () {
 		});
     });
 	
-	/* Deal Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+
 	
-	$('.deal-slider').slick({
-        dots: false,
-        infinite: false,
-		prevArrow: '.previous-deal',
-		nextArrow: '.next-deal',
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-		infinite: false,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: false
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-    });
-	
-	/* News Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 	
 	$('#news-slider').slick({
         dots: false,
