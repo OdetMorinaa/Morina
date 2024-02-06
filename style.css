@@ -508,6 +508,8 @@ textarea{
     resize: none;
     width: 60%;
     height: 50px;
+    border: none;
+    background-color: transparent;
 }
 
 .has-search .form-control-feedback {
