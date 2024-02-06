@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+   </head>
     <script src="slider.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +23,8 @@
 <li> <a href="contact.html">Contact</a></li>
         </ul>
      </div>
-     <div class="dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div> 
+     <div class="dots"></div>
+
     <div class="slider">
         <div class="slider-inner">
 
@@ -41,15 +39,61 @@
 
             <div class="slide">
                 <img src="home.jpg" alt="Slide 1">
-                <h2>Smart Home</h2>
+                <h2>Shtepi e menqur</h2>
                 <p>Shtëpia e kontrolluar nga zëri dhe inteligjenca artificiale e Morina Industries do të lejojë përdoruesit të kontrollojnë çdo aspekt të ambientit të tyre duke përdorur thjeshtësinë e zërit. Me këtë teknologji të avancuar, përdoruesit mund të ndezin ose fikin dritat, të rregullojnë temperaturën, të kontrollojnë pajisjet elektrike, të integrojnë pajisjet e tyre inteligjente, si edhe të monitorojnë dhe kontrollojnë kamerat e sigurisë, duke ofruar një përvojë të sigurtë, të rehatshme dhe të përshtatshme në shtëpinë e tyre, duke e bërë atë të ndjehet si një ambient i shtruar për nevojat e tyre dhe i përshtatur me intuitivitet dhe inteligjencë.</p>
             </div>
             
                    
         </div>
     </div>
+
+
+
+    
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
+    <script>
+
+        // JavaScript code to handle the dot highlighting
+        var slides = document.querySelectorAll('.slide');
+        var dotsContainer = document.querySelector('.dots');
+        var currentSlideIndex = 0;
+
+        slides.forEach(function(slide, index) {
+            var dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (index === currentSlideIndex) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', function() {
+                showSlide(index);
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        function showSlide(index) {
+            slides.forEach(function(slide, slideIndex) {
+                if (slideIndex === index) {
+                    slide.style.display = 'block';
+                    dotsContainer.children[slideIndex].classList.add('active');
+                } else {
+                    slide.style.display = 'content';
+                    dotsContainer.children[slideIndex].classList.remove('active');
+                }
+            });
+            currentSlideIndex = index;
+        }
+
+        document.querySelector('.next').addEventListener('click', function() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showSlide(currentSlideIndex);
+        });
+    </script>
 
 </body>
 </html>

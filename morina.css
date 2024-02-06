@@ -73,7 +73,6 @@
     position: absolute;
     top: 60%;
     transform: translateY(-30%);
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -157,7 +156,6 @@ body{
     position: absolute;
     top: 60%;
     transform: translateY(-30%);
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -170,6 +168,7 @@ body{
 
 .next {
     right: 0;
+    
 }
 
 
@@ -228,21 +227,20 @@ body{
 
 }
 
-.dots {
-    text-align: center;
-    margin-top: 10px; /* Adjust as needed */
-}
+    .dots {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color: skyblue;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px; /* Adjust spacing between dots */
-}
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px;
+    }
 
-/* Add a class to style the active dot */
-.active-dot {
-    background-color: #555;
-}
+    .active {
+        background-color: skyblue;
+    }
