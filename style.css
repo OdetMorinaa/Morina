@@ -104,6 +104,10 @@ h6 a {
     opacity: 1
 }
 
+h1.banner_taital{
+    color: black;
+}
+
 button:focus {
     outline: none;
 }
@@ -214,7 +218,6 @@ button {
 .banner_bg_main {
     width: 100%;
     float: left;
-    background-color: orange;
     height: 150%;
     background-size: 140%;
     background-repeat: no-repeat;
@@ -469,6 +472,18 @@ button {
     order: 2;
 }
 
+#bg-video {
+    position: fixed;
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the video horizontally and vertically */
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -1; /* Place it behind all other content */
+}
+
 
 /* Bootstrap 4 text input with search icon */
 
@@ -487,6 +502,12 @@ input:active{
 }
 textarea:active{
     border: none;
+    resize: none;
+}
+textarea{
+    resize: none;
+    width: 60%;
+    height: 50px;
 }
 
 .has-search .form-control-feedback {
