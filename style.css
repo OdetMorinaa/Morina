@@ -307,7 +307,7 @@ button {
 /* opennav bar start */
 
 .sidenav {
-    height: 45%;
+    height: 29%;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -342,7 +342,7 @@ button {
 
 @media screen and (max-width: 768px) {
     .sidenav {
-        width: 38%;
+        width: 35%;
     }
 
     .toggle_icon {
@@ -660,11 +660,6 @@ a:hover {
 }
 
 
-/* banner section end */
-
-
-/* fashion section start */
-
 .fashion_section {
     width: 100%;
     float: left;
@@ -685,23 +680,22 @@ a:hover {
     margin-top: 30px;
 }
 
-/* Add these styles to your style.css file */
 
 .box_main {
-    margin-bottom: 20px; /* Adjust the margin based on your design */
+    margin-bottom: 20px; 
     background-color: white;
     padding: 15px;
     border-radius: 20px;
  }
  
  .shirt_text {
-    font-size: 16px; /* Adjust the font size based on your design */
-    margin-bottom: 10px; /* Adjust the margin based on your design */
+    font-size: 16px; 
+    margin-bottom: 10px; 
  }
 
  
  .price_text {
-    font-size: 14px; /* Adjust the font size based on your design */
+    font-size: 14px; 
     color: #262626;
  }
  
@@ -785,10 +779,7 @@ a:hover {
 }
 
 
-/* fashion section end */
 
-
-/* electronic section start */
 
 .electronic_img {
     width: 100%;
@@ -826,10 +817,8 @@ a:hover {
 }
 
 
-/* electronic section end */
 
 
-/* jewellery section start */
 
 .jewellery_section {
     width: 100%;
@@ -872,28 +861,12 @@ a:hover {
     background-color: #f26522;
 }
 
-
-/* loader bar css start */
-
-
-
-
-/* loader bar css end */
-
-
-/* jewellery section end */
-
-
-/* footer section start */
-
-
-/* footer section start */
-
 .footer_section {
     width: 100%;
     float: left;
     background-color: #252525;
     height: auto;
+    padding: 99.5px;
 }
 
 .footer_logo {
