@@ -47,12 +47,7 @@
     padding: 5rem 3.5rem;
   }
   
-  h1, label, button, .description {
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-  }
-  
+
   h1 {
     color:var(--h1-color);
     text-transform: uppercase;
@@ -68,12 +63,7 @@
     width: 40vw;
     margin: 0.25rem 0;
   }
-  
-  label, .description {
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    font-size: 0.625rem;
-  }
+
   
   form {
     width: 31.25rem;
@@ -143,9 +133,7 @@
     right: 0;
   }
   
-  .description {
-      margin-left: 1.25rem;
-    }
+
   
   .theme-switch {
     display: inline-block;
@@ -158,27 +146,9 @@
     display:none;
   }
   
-  .slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-  }
   
-  .slider:before {
-    background-color: #fff;
-    bottom: 0.25rem;
-    content: "";
-    width: 26px;
-    height: 26px;
-    left: 0.25rem;
-    position: absolute;
-    transition: .4s;
-  }
+  
+
   
   input:checked + .slider {
     background-color: var(--button-color);
@@ -223,10 +193,7 @@
     input, textarea, button {
       font-size: 0.65rem;
     }
-    .description {
-      font-size: 0.3rem;
-      margin-left: 0.4rem;
-    }
+
     button {
       width: 7rem;
     }
@@ -265,3 +232,32 @@
   }
   
   }
+
+  .custom_menu {
+    display: flex;
+    justify-content: center;
+    background-color: #2c3e50;
+}
+
+.custom_menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.custom_menu li {
+    float: none;
+    margin-bottom: 10px;
+}
+
+.custom_menu li a {
+    display: block;
+    padding: 10px;
+    color: #f1f1f1;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom_menu li a:hover {
+    background-color: #30302e;
+    color: #f26522;
+}
