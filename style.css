@@ -32,6 +32,7 @@ body {
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    background: url(wave-light.mp4);
     
 }
 
@@ -145,10 +146,6 @@ a,
     transition: all .3s ease-in-out;
 }
 
-img {
-    max-width: 60%;
-    height: 50%;
-}
 
  :focus {
     outline: 0;
@@ -834,6 +831,7 @@ a:hover {
     min-height: 293px;
 }
 
+
 #jewellery_main_slider a.carousel-control-next {
     right: 615px;
     top: 75%;
@@ -1012,3 +1010,5 @@ input.mail_bt::placeholder {
 }
 
 /* Add styles for the mobile toggle button */
+
+
