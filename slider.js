@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-alert("nese vetem nuk duket faqja mir per paisjen tende kerkojm ndjes per arsye se jemi duke punuar akoma ne te!! Odet Morina Ju don")
 
         document.addEventListener('DOMContentLoaded', function () {
             const slides = document.querySelectorAll('.slide');

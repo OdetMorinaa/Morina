@@ -1,178 +1,92 @@
-#bg-video {
-    position: fixed;
-    top: 50%; /* Position from the top */
-    left: 50%; /* Position from the left */
-    transform: translate(-50%, -50%); /* Center the video horizontally and vertically */
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto;
-    z-index: -1; /* Place it behind all other content */
-}
-
-.slider {
+.slideshow-container {
+    max-width: 1000px;
     position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  body{
+    background-color:rgba(0,0,0,0.8) ;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: static;
+    bottom: 8px;
     width: 100%;
-    max-width: 800px; /* Set your desired max width */
-    margin: 0 auto; /* Center the slider horizontally */
-    overflow: hidden; /* Hide overflowing content */
-    padding-top: 100px; /* Add padding-top instead */
-    display: flex; /* Ensure slider items are displayed in a row */
-    justify-content: center; /* Center the slider items horizontally */
-    align-items: center; /* Center the slider items vertically */
-}
-
-.slide {
-    flex: 0 0 100%; /* Ensure equal width for all slides */
-    position: relative; /* Positioning context for pseudo-element */
-}
-
-.slide img {
-    width: 20%;
-    height: auto;
-    border-radius: 20px; /* Add border-radius for a rounded corner effect */
-    position: relative; /* Ensure proper z-index stacking */
-    z-index: 1; /* Ensure image is above pseudo-element */
     text-align: center;
-}
-
-.slide::before {
-    content: '';
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
     position: absolute;
-    top: -20px; /* Adjust to control the height of the wave */
-    left: 0;
-    right: 0;
-    bottom: -20px; /* Adjust to control the height of the wave */
-    opacity: 0.5; /* Adjust opacity as needed */
-    z-index: 0; /* Ensure pseudo-element is below image */
-}
-
-
-
-.slider-inner {
-    display: flex;
-}
-
-.slide {
-    flex: 0 0 100%; /* Ensure equal width for all slides */
-}
-
-.slide img {
-    width: 50%;
-    height: auto;
-    border-color: gray solid;
-    margin-left: 110px;
-    margin-top: 0px;
-
-}
-
-
-
-.prev,
-.next {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-30%);
-    border: none;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
     cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-}
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
 
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-
-.slide h2,
-.slide p {
-    margin-top: 10px; /* Add some space between the image and text */
-    margin-left: 250px;
-}
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Set your desired max width */
-    margin: 0 auto; /* Center the slider horizontally */
-    overflow: hidden; /* Hide overflowing content */
-    padding-top: 100px; /* Add padding-top instead */
-    display: flex; /* Ensure slider items are displayed in a row */
-    justify-content: center; /* Center the slider items horizontally */
-    align-items: center; /* Center the slider items vertically */
-}
-
-
-.slide {
-    flex: 0 0 100%; /* Ensure equal width for all slides */
-    position: relative; /* Positioning context for pseudo-element */
-}
-
-
-
-.slide::before {
-    content: '';
-    position: absolute;
-    top: -20px; /* Adjust to control the height of the wave */
-    left: 0;
-    right: 0;
-    bottom: -20px; /* Adjust to control the height of the wave */
-    opacity: 0.5; /* Adjust opacity as needed */
-    z-index: 0; /* Ensure pseudo-element is below image */
-}
-
-
-
-.slider-inner {
-    display: flex;
-}
-
-.slide {
-    flex: 0 0 100%; /* Ensure equal width for all slides */
-}
-
-.slide img {
-    width: 60%;
-    height: auto;
-    margin-left: 200px;
-    margin-top: 120px;
-    border-radius: 25px;
-
-}
-
-body{
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with 50% opacity */
-    font-family: "Tilt Neon", sans-serif;
-
-
-}
-
-
-.prev,
-.next {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-30%);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-    
-}
-
-
-.slide h2,
+  .slide h2,
 .slide p {
     margin-top: 10px; /* Add some space between the image and text */
     margin-left: 200px;
@@ -226,21 +140,3 @@ body{
 
 
 }
-
-    .dots {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .dot {
-        height: 15px;
-        width: 15px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 0 5px;
-    }
-
-    .active {
-        background-color: skyblue;
-    }
