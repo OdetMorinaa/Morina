@@ -75,3 +75,32 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 alert("nese vetem nuk duket faqja mir per paisjen tende kerkojm ndjes per arsye se jemi duke punuar akoma ne te!! Odet Morina Ju don")
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const sliderInner = document.querySelector('.slider-inner');
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            const slideWidth = slides[0].clientWidth;
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateSlider();
+            }
+
+            function updateSlider() {
+                const offset = -currentSlide * slideWidth;
+                sliderInner.style.transform = `translateX(${offset}px)`;
+            }
+
+            // Dynamically set width of slider-inner
+            sliderInner.style.width = `${slideCount * slideWidth}px`;
+
+            // Automatic slideshow
+            setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+            // Click on image to go to the next slide
+            slides.forEach(slide => {
+                slide.addEventListener('click', nextSlide);
+            });
+        });
