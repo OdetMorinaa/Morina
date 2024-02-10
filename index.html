@@ -42,7 +42,6 @@
 
       <video autoplay muted loop playsinline id="bg-video">
          <source src="wave-light.mp4" type="video/mp4">
-         Your browser does not support the video tag.
      </video>
      
 
@@ -220,10 +219,8 @@
          <style>
  
          </style>
-         <!-- banner section end -->
       </div>
-      <!-- banner bg main end -->
-      <!-- fashion section start -->
+      
       <div class="fashion_section">
          <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -234,20 +231,53 @@
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
+
+                                 <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                      // Get all Buy Now links
+                                      const buyNowLinks = document.querySelectorAll('.buy_bt a');
+                                  
+                                      // Function to handle click event
+                                      function handleBuyNowClick(event) {
+                                        event.preventDefault(); // Prevent default link behavior
+                                  
+                                        // Get the PDF URL from the data attribute
+                                        const pdfUrl = event.target.dataset.pdfUrl;
+                                  
+                                        // Create a temporary anchor element to trigger the download
+                                        const downloadLink = document.createElement('a');
+                                        downloadLink.href = pdfUrl;
+                                        downloadLink.download = ''; 
+                                        document.body.appendChild(downloadLink);
+                                  
+                                        // Trigger the click event on the anchor element
+                                        downloadLink.click();
+                                  
+                                        // Clean up
+                                        document.body.removeChild(downloadLink);
+                                      }
+                                  
+                                      // Attach click event listener to each Buy Now link
+                                      buyNowLinks.forEach(function(link) {
+                                        link.addEventListener('click', handleBuyNowClick);
+                                      });
+                                    });
+                                  </script>
+                                  
 
                                  <h4 class="shirt_text">48-ligjet-e-pushtetit</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
                                  <div class="tshirt_img"><img src="48-ligjet-e-pushtetit-robert-greene (1).jpg"></div>
                                  <div class="description">48 Ligjet e Fuqisë nga Robert Greene është një libër për ndihmë vetë, duke ofruar këshilla për të fituar dhe mbajtur fuqinë, duke përdorur mësime të nxjerra nga parabola dhe përvoja e figurave historike. Fuqia varet nga marrëdhëniet midis një personi dhe atyre që ai ose ajo synon të kontrollojë.</div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="buy_bt"><a href="The 48 Laws of Power ( PDFDrive ).pdf" download>Buy Now</a></div>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">crime and punishment</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -261,7 +291,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Give and Take_ WHY HELPING OTHERS DRIVES OUR SUCCESS</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -284,7 +314,7 @@
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">To Kill a Mocking Bird</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -298,7 +328,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">THINK and GROW RICH                                 </h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -313,7 +343,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Living life in the light</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -336,7 +366,7 @@
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">48-ligjet-e-pushtetit-robert-greene</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -350,7 +380,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Lessons from the Great Depression For Dummies (For Dummies (Business & Personal Finance))</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -364,7 +394,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Lord of the Rings - The Fellowship of the ring</h4>
                                  <p class="price_text">Price  <span style="color: #262626;">24€</span></p>
@@ -396,7 +426,7 @@
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Rich Dad Poor Dad</h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -410,7 +440,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Mother Teresa _ an authorized biography</h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -424,7 +454,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Napoleon_ A Biography</h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -447,7 +477,7 @@
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Between Serb and Albanian_ A History of Kosovo </h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -461,7 +491,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">World History 101</h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -475,7 +505,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Encyclopedia of World History</h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -498,7 +528,7 @@
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">48-ligjet-e-pushtetit-robert-greene</h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -512,7 +542,7 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                  <h4 class="shirt_text">Genghis Khan: His Conquests, His Empire, His Legacy                                 </h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
@@ -530,14 +560,14 @@
                            
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                                                  <p class="tag_text">example/shembull</p> <!-- Added tag here -->
+                                 <p class="tag_text">English Version</p> <!-- Added tag here -->
 
                                                                   
 
                                  <h4 class="shirt_text">Skanderbeg: Der neue Alexander auf dem Balkan
                                  </h4>
                                  <p class="price_text">Start Price  <span style="color: #262626;">24€</span></p>
-                                 <div class="electronic_img"><img src="shqipsk.jpg"></div>
+                                 <div class="electronic_img"><img src="skanderbeg.jpg"></div>
                                  <div class="description">Skanderbeg: Der neue Alexander auf dem Balkan është një studim i thellë mbi jetën dhe veprën e Gjergj Kastriotit, një hero kombëtar shqiptar i njohur edhe si Skanderbeg. Libri shqyrton kontekstin historik dhe politik të kohës në të cilën jetoi Skanderbeg, si dhe sfidat dhe triumfat e tij në betejat kundër Perandorisë Osmane. Përmes këtij studimi, lexuesit njihen me rolin dhe ndikimin e Skanderbegut në përballjen me pushtuesit osmanë dhe në mbrojtjen e identitetit kombëtar shqiptar. Skanderbeg portretizohet si një figurë udhëheqëse dhe frymëzuese, i cili luftoi për liri dhe pavarësi për popullin e tij, duke lënë një trashëgimi të madhe historike në Ballkan.</div>
 
                                  <div class="btn_main">
